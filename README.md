@@ -84,6 +84,7 @@ Comparative genomic analysis of SARS-CoV-2 complete genomes from different count
 ### Multiple sequence alignment generated with clustal omega 
 
 - [Alignment file](data/alignment/alignment.aln.fasta)
-scripts/     -> R scripts for analysis
+# Scripts/     -> R scripts for analysis
+All R scripts used for the analysis are available in the `scripts/` directory. 
 results/     -> output tables
 figures/     -> final plots
