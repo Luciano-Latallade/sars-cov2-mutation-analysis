@@ -75,8 +75,15 @@ Comparative genomic analysis of SARS-CoV-2 complete genomes from different count
 
 # Data/        -> raw genomes and alignment files
 ### Original genome references in FASTA format 
+
+- [USA genome](data/raw/USA.fasta)
+- [Wuhan reference genome](data/raw/Wuhan.fasta)
+- [Nigeria genome](data/raw/Nigeria.fasta)
+- [Argentina genome](data/raw/Argentina.fasta)
+
 ### Multiple sequence alignment generated with clustal omega 
 
+- [Alignment file](data/alignment/alignment.aln.fasta)
 scripts/     -> R scripts for analysis
 results/     -> output tables
 figures/     -> final plots
