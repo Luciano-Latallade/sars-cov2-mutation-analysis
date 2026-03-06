@@ -1,1 +1,144 @@
+#1 Leer alineamiento
+alignment <- readDNAStringSet("alignment.aln-fasta")
+seq_list <- lapply(alignment, function(x) strsplit(as.character(x), "")[[1]])
 
+seq_matrix <- do.call(rbind, seq_list)
+
+dim(seq_matrix)
+
+#file.exists("alignment.aln-fasta")
+file.exists("alignment.aln-fasta")
+#alignment-> tiene que mostrar 4 secuencias
+#width(alignment)-> devuelve la misma longitud para todas
+width(alignment)
+#dim(seq_matrix)-> 4 x 29900
+
+#2 Buscar referencia Wuhan
+ref_index <- grep("Wuhan", names(alignment))
+reference <- seq_matrix[ref_index, ]
+
+ref_index
+
+reference <- seq_matrix[2, ]
+query <- seq_matrix[1, ]
+
+mutated_positions <- which(reference != query &
+                             reference != "-" &
+                             query != "-")
+#ref_index-> debe dar 2
+#length(mutated_positions)-> da el valor de mutaciones encontradas para el query asignado en este paso a modo prueba
+head(mutated_positions)
+
+# 3️⃣ Definir regiones génicas (Wuhan-Hu-1)
+genes <- data.frame(
+  gene = c("5UTR","ORF1ab","S","ORF3a","E","M","ORF6","ORF7a",
+           "ORF7b","ORF8","N","3UTR"),
+  start = c(1,266,21563,25393,26245,26523,27202,27394,
+            27756,27894,28274,29534),
+  end = c(265,21555,25384,26220,26472,27191,27387,27759,
+          27887,28259,29533,29903)
+)
+
+genes$length <- genes$end - genes$start + 1
+
+sum(reference == "-")
+# 4️⃣ Función para asignar gen según posición
+assign_gene <- function(pos){
+  idx <- which(pos >= genes$start & pos <= genes$end)
+  if(length(idx) == 1){
+    return(genes$gene[idx])
+  } else {
+    return("Intergenic")
+  }
+}
+#Para verificar que el paso se ejecutó pruebo varias posiciones y verifico que el gen asignado sea el correcto. 
+assign_gene(23000)
+
+# 5️⃣ Detectar mutaciones por secuencia
+
+results_list <- list()
+
+for(i in 1:nrow(seq_matrix)){
+  
+  if(i != ref_index){
+    
+    query <- seq_matrix[i, ]
+    
+    mutated_positions <- which(reference != query &
+                                 reference != "-" &
+                                 query != "-")
+    
+    if(length(mutated_positions) > 0){
+      
+      df <- data.frame(
+        Sequence = names(alignment)[i],
+        Position = mutated_positions,
+        Gene = sapply(mutated_positions, assign_gene)
+      )
+      
+      results_list[[length(results_list)+1]] <- df
+    }
+  }
+}
+
+mutations_df <- dplyr::bind_rows(results_list)
+
+head(mutations_df)
+
+nrow(mutations_df)
+
+# 6 Tabla con tasas normalizadas
+
+summary_table <- mutations_df %>%
+  group_by(Sequence, Gene) %>%
+  summarise(Mutations = n(), .groups="drop") %>%
+  left_join(genes[,c("gene","length")],
+            by = c("Gene"="gene")) %>%
+  mutate(Normalized_Rate = Mutations / length) %>%
+  arrange(Sequence, desc(Normalized_Rate))
+
+summary_table
+
+#para ordenar ese summary_table para ver que genes acumulan mas cambios
+
+summary_table %>%
+  arrange(desc(Normalized_Rate))
+
+# 7 Gráfico de barras con ggplot 2
+
+#eliminar filas con zonas intergenicas que no tienen asignado ningun gen
+plot_data <- summary_table %>%
+  dplyr::filter(!is.na(Normalized_Rate)) %>%
+  dplyr::filter(Gene != "Intergenic")
+
+#modificación de df para luego graficar con ggplot2
+plot_data <- summary_table %>%
+  dplyr::filter(!is.na(Normalized_Rate)) %>%
+  dplyr::filter(Gene != "Intergenic") %>%
+  dplyr::mutate(
+    Sequence_clean = case_when(
+      grepl("USA", Sequence) ~ "United States",
+      grepl("Buenos Aires", Sequence) ~ "Argentina"
+    )
+  )
+
+plot_data$Gene <- reorder(plot_data$Gene, plot_data$Normalized_Rate)
+
+ggplot(plot_data, aes(x = Gene, y = Normalized_Rate, fill = Sequence_clean)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme_minimal() +
+  labs(
+    title = "Normalized mutations per gene",
+    x = "Gen",
+    y = "Mutations per nucleotide",
+    fill="Country"
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 0.5),
+    plot.title = element_text(face = "bold")
+  )
+
+#Descarga de tabla summary_table
+write.csv(summary_table, 
+          file = "summary_table.csv", 
+          row.names = FALSE)
