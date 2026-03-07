@@ -56,7 +56,7 @@ to the Wuhan reference genome.
 Detailed results are available in the [Results report](RESULTS.md).
 
 
-# Data/        -> raw genomes and alignment files
+## Data/        -> raw genomes and alignment files
 ### Original genome references in FASTA format 
 
 - [USA genome](data/raw/USA.fasta)
@@ -67,8 +67,6 @@ Detailed results are available in the [Results report](RESULTS.md).
 ### Multiple sequence alignment generated with clustal omega 
 
 - [Alignment file](data/alignment/alignment.aln.fasta)
-# Scripts/     -> R scripts for analysis
-All R scripts used for the analysis are available in the `Scripts/` directory. 
-results/     -> output tables
-figures/     -> final plots
-link a resultados completos
+## Scripts/     -> R scripts for analysis
+All R scripts used for the analysis are available in [Scripts Directory](/Scripts)
+
