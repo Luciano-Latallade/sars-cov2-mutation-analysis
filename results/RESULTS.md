@@ -15,7 +15,7 @@
    - The global substitution matrix revealed a strong bias toward C→T substitutions, with a rate of 30.19, which is substantially higher than other substitution types.
    - This pattern is consistent with the well-known mutational bias of SARS-CoV-2, often associated with host-mediated RNA editing processes.
    - The Maximum Likelihood Estimate of the transition/transversion bias (R) was 2.17, indicating a clear predominance of transition mutations over transversions.
-[Substitution matrix](results/Substitution_matrix.txt)
+[Substitution matrix](results/Substituion_matrix.txt)
 
 ### Gene-Level Mutation Analysis
    - Mutations were mapped to genomic regions and normalized by gene length in order to compare mutation rates across genes.
