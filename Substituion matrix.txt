@@ -1,0 +1,13 @@
+Maximum Likelihood Estimate of Substitution Matrix
+ 	A	T/U	C	G
+A	-	4.85	2.76	8.89
+T/U	4.50	-	17.22	2.96
+C	4.50	30.19	-	2.96
+G	13.55	4.85	2.76	-
+NOTE.-- Each entry is the probability of substitution (r) from one base (row) to another base (column). Substitution pattern and rates were estimated under the Tamura-Nei (1993) model [1]. Rates of different transitional substitutions are shown in bold and those of transversionsal substitutions are shown in italics. Relative values of instantaneous r should be considered when evaluating them. For simplicity, sum of r values is made equal to 100. The nucleotide frequencies are 29.89% (A), 32.16% (T/U), 18.34% (C), and 19.61% (G). For estimating ML values, a tree topology was automatically computed. The maximum Log likelihood for this computation was -41837.488 The analytical procedure encompassed 4 nucleotide sequences with 29,915 positions in the final dataset. Evolutionary analyses were conducted in MEGA12 [2].
+
+1. Tamura K. and Nei M. (1993). Estimation of the number of nucleotide substitutions in the control region of mitochondrial DNA in humans and chimpanzees. Molecular Biology and Evolution 10:512-526.
+
+2. Kumar S., Stecher G., Suleski M., Sanderford M., Sharma S., and Tamura K. (2024). Molecular Evolutionary Genetics Analysis Version 12 for adaptive and green computing. Molecular Biology and Evolution 41:1-9.
+
+Disclaimer: While every effort has been made to ensure the accuracy of the caption, it is provided "as is" without warranty of any kind. Users are advised to thoroughly review the caption before its use for any purpose and report any errors or issues to the authors at www.megasoftware.net. The authors and their employers disclaim any liability for damages, including but not limited to special or consequential damages. Additionally, the authors expressly disclaim all other warranties, whether expressed or implied, including the suitability of the caption text for a specific purpose, use, or application.

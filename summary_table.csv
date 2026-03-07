@@ -1,0 +1,20 @@
+﻿Sequence,Gene,Mutations,length,Normalized_Rate
+"Buenos Aires|OZ060936.1 Severe acute respiratory syndrome coronavirus 2 isolate INEI103376 genome assembly, complete genome: monoparti",5UTR,2,265,0.00754700000000000
+"Buenos Aires|OZ060936.1 Severe acute respiratory syndrome coronavirus 2 isolate INEI103376 genome assembly, complete genome: monoparti",N,5,1260,0.00396800000000000
+"Buenos Aires|OZ060936.1 Severe acute respiratory syndrome coronavirus 2 isolate INEI103376 genome assembly, complete genome: monoparti",3UTR,1,370,0.0027030000000000
+"Buenos Aires|OZ060936.1 Severe acute respiratory syndrome coronavirus 2 isolate INEI103376 genome assembly, complete genome: monoparti",S,6,3822,0.00157000000000000
+"Buenos Aires|OZ060936.1 Severe acute respiratory syndrome coronavirus 2 isolate INEI103376 genome assembly, complete genome: monoparti",ORF3a,1,828,0.00120800000000000
+"Buenos Aires|OZ060936.1 Severe acute respiratory syndrome coronavirus 2 isolate INEI103376 genome assembly, complete genome: monoparti",ORF1ab,16,21290,0.000752000000000000
+"Buenos Aires|OZ060936.1 Severe acute respiratory syndrome coronavirus 2 isolate INEI103376 genome assembly, complete genome: monoparti",Intergenic,3,NA,NA
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",5UTR,5,265,0.0188680000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",S,70,3822,0.0183150000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",ORF7b,2,132,0.0151520000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",M,8,669,0.0119580000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",ORF7a,3,366,0.00819700000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",N,10,1260,0.00793700000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",ORF6,1,186,0.00537600000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",ORF3a,4,828,0.00483100000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",E,1,228,0.0043860000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",ORF8,1,366,0.00273200000000000
+"USA|PZ008183.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IL-RIPHL_124662_G/2026, complete genome",ORF1ab,46,21290,0.00216100000000000
+
