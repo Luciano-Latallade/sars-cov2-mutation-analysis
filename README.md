@@ -59,14 +59,14 @@ Detailed results are available in the [Results report](RESULTS.md).
 ## Data/        -> raw genomes and alignment files
 ### Original genome references in FASTA format 
 
-- [USA genome](data/raw/USA.fasta)
-- [Wuhan reference genome](data/raw/Wuhan.fasta)
-- [Nigeria genome](data/raw/Nigeria.fasta)
-- [Argentina genome](data/raw/Argentina.fasta)
+- [USA genome](data/raw/USA.txt)
+- [Wuhan reference genome](data/raw/Wuhan.txt)
+- [Nigeria genome](data/raw/Nigeria.txt)
+- [Argentina genome](data/raw/Buenos Aires.txt)
 
 ### Multiple sequence alignment generated with clustal omega 
 
-- [Alignment file](data/alignment/alignment.aln.fasta)
+- [Alignment file](data/alignment/alignment.aln-fasta)
 ## Scripts/     -> R scripts for analysis
 All R scripts used for the analysis are available in [Scripts Directory](/Scripts)
 
