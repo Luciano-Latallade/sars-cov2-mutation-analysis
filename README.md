@@ -62,7 +62,7 @@ Detailed results are available in the [Results report](RESULTS.md).
 - [USA genome](data/raw/USA.txt)
 - [Wuhan reference genome](data/raw/Wuhan.txt)
 - [Nigeria genome](data/raw/Nigeria.txt)
-- [Argentina genome](data/raw/Buenos Aires.txt)
+- [Argentina genome](data/raw/Buenos_Aires.txt)
 
 ### Multiple sequence alignment generated with clustal omega 
 
