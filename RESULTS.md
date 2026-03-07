@@ -15,9 +15,12 @@
    - The global substitution matrix revealed a strong bias toward C→T substitutions, with a rate of 30.19, which is substantially higher than other substitution types.
    - This pattern is consistent with the well-known mutational bias of SARS-CoV-2, often associated with host-mediated RNA editing processes.
    - The Maximum Likelihood Estimate of the transition/transversion bias (R) was 2.17, indicating a clear predominance of transition mutations over transversions.
+[Substitution Matrix](results/Substitution_Matrix.txt)
 
 ### Gene-Level Mutation Analysis
    - Mutations were mapped to genomic regions and normalized by gene length in order to compare mutation rates across genes.
    - For the United States genome, the 5' UTR showed the highest mutation rate after normalization by sequence length. The Spike (S) gene displayed a similar normalized mutation rate.
    - Although ORF1ab contained the largest absolute number of mutations (46 substitutions), it is also the longest genomic region (21,290 nucleotides), which results in a lower normalized mutation rate compared with other genes.
    - In the Argentina genome, the 5' UTR also showed the highest mutation rate when normalized by gene length. Similar to the United States genome, ORF1ab contained the largest number of mutations but exhibited a relatively low mutation rate due to its large genomic size.
+[Mutation Summary Table](results/summary_table.csv)
+![Mutation Rates Plot](results/Rplot.png)
