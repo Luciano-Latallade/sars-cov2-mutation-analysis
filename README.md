@@ -53,7 +53,7 @@ across the analyzed SARS-CoV-2 genomes.
 - The United States isolate showed the highest number of mutations relative
 to the Wuhan reference genome.
 
-Detailed results are available in the [Results report](/RESULTS.md).
+Detailed results are available in the [Results report](results/RESULTS.md)
 
 
 ## Data/        -> raw genomes and alignment files
