@@ -88,3 +88,4 @@ Comparative genomic analysis of SARS-CoV-2 complete genomes from different count
 All R scripts used for the analysis are available in the `Scripts/` directory. 
 results/     -> output tables
 figures/     -> final plots
+link a resultados completos
