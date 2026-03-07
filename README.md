@@ -47,7 +47,15 @@ Comparative genomic analysis of SARS-CoV-2 complete genomes from different count
 - ggplot2
 
 # Results
+A comparative genomic analysis identified several nucleotide substitutions
+across the analyzed SARS-CoV-2 genomes.
 
+The United States isolate showed the highest number of mutations relative
+to the Wuhan reference genome.
+
+Detailed results are available in the
+[Results report](RESULTS.md).
+-
 - The comparative genomic analysis revealed several nucleotide substitutions across the analyzed SARS-CoV-2 genomes.
 - The isolate from the United States showed the highest number of mutations relative to the Wuhan reference genome, whereas the Argentina isolate displayed fewer mutations, indicating a closer similarity to the reference sequence.
 ### Pairwise Genetic Distances
