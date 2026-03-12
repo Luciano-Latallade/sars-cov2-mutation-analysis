@@ -40,7 +40,7 @@ genes <- data.frame(
 genes$length <- genes$end - genes$start + 1
 
 sum(reference == "-")
-# Function to assign gene related with mutation's position
+# 4 Function to assign gene related with mutation's position
 assign_gene <- function(pos){
   idx <- which(pos >= genes$start & pos <= genes$end)
   if(length(idx) == 1){
@@ -50,7 +50,7 @@ assign_gene <- function(pos){
   }
 }
 
-# Detect mutation per sequence 
+# 5 Detect mutation per sequence 
 
 results_list <- list()
 
@@ -83,7 +83,7 @@ head(mutations_df)
 
 nrow(mutations_df)
 
-# Normalized rate (mutations/lenght)
+# 6 Normalized rate (mutations/lenght)
 
 summary_table <- mutations_df %>%
   group_by(Sequence, Gene) %>%
@@ -128,7 +128,7 @@ ggplot(plot_data, aes(x = Gene, y = Normalized_Rate, fill = Sequence_clean)) +
     plot.title = element_text(face = "bold")
   )
 
-#Download the tabble 
+# 8 Download the tabble 
 write.csv(summary_table, 
           file = "summary_table.csv", 
           row.names = FALSE)
