@@ -96,7 +96,7 @@ summary_table <- mutations_df %>%
 summary_table %>%
   arrange(desc(Normalized_Rate))
 
-# 7 Gráfico de barras con ggplot 2 Box plot with ggplot2
+# 7 Box plot with ggplot2
 
 plot_data <- summary_table %>%
   dplyr::filter(!is.na(Normalized_Rate)) %>%
